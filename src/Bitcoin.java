@@ -3,7 +3,7 @@ public class Bitcoin {
     // 计算攻击者成功概率的方法
     public static double attackerSuccessProbability(double q, int z){
 
-        double p = 1.0 - q;  //定义一个
+        double p = 1.0 - q;  //
         double lambda = z * (q/p);
         double sum = 1.0;
         int i, k;
@@ -14,7 +14,9 @@ public class Bitcoin {
             }
             sum -= poisson * (1 - Math.pow(q/p,z-k));
         }
+        System.out.println("kkk");
         return p;
+
     }
 
     public static void main(String args[]){
